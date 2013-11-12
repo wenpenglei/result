@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>One:</strong>
+  <%= @amount.one %>
+</p>
+
+<p>
+  <strong>Two:</strong>
+  <%= @amount.two %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @amount.result %>
+</p>
+
+<%= link_to 'Edit', edit_amount_path(@amount) %> |
+<%= link_to 'Back', amounts_path %>

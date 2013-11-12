@@ -1,0 +1,31 @@
+<h1>Listing amounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>One</th>
+      <th>Two</th>
+      <th>Result</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amounts.each do |amount| %>
+      <tr>
+        <td><%= amount.one %></td>
+        <td><%= amount.two %></td>
+        <td><%= amount.result %></td>
+        <td><%= link_to 'Show', amount %></td>
+        <td><%= link_to 'Edit', edit_amount_path(amount) %></td>
+        <td><%= link_to 'Destroy', amount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amount', new_amount_path %>
